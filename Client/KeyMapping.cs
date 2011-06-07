@@ -72,14 +72,15 @@ namespace Client
         {
             if (!Hotkey.GetCanRegister(windowControl))
             {
-                Console.WriteLine("Whoops, looks like attempts to register will fail or throw an exception");
+                Status = "Cannot Register";
             }
             else
             {
                 Hotkey.Register(windowControl);
                 Status = "Registered";
-                Console.WriteLine(Status);
+                
             }
+            Console.WriteLine(Status);
         }
 
         public bool Alt

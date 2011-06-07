@@ -92,8 +92,10 @@
             this.statusDataGridViewTextBoxColumn});
             this.gvMappings.DataSource = this.bsMappings;
             this.gvMappings.Location = new System.Drawing.Point(3, 12);
+            this.gvMappings.MultiSelect = false;
             this.gvMappings.Name = "gvMappings";
             this.gvMappings.ReadOnly = true;
+            this.gvMappings.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gvMappings.Size = new System.Drawing.Size(537, 242);
             this.gvMappings.TabIndex = 5;
             // 
@@ -171,7 +173,7 @@
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -184,8 +186,8 @@
             this.Controls.Add(this.cmbKey);
             this.Controls.Add(this.btnUnreg);
             this.Controls.Add(this.btnReg);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Main";
+            this.Text = "Name Generator";
             ((System.ComponentModel.ISupportInitialize)(this.gvMappings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsMappings)).EndInit();
             this.ResumeLayout(false);

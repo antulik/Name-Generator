@@ -23,15 +23,19 @@ namespace Client
             var Mappings = new List<KeyMapping>();
 
             var m = new KeyMapping();
-            m.Generator = new Generators.GProjectName();
+            m.Generator = new Generators.Project();
+            m.Alt = true;
+            m.Hotkey.KeyCode = Keys.D1;
             Mappings.Add(m);
 
             m = new KeyMapping();
-            m.Generator = new Generators.GElfName();
+            m.Generator = new Generators.Elf();
+            m.Alt = true;
+            m.Hotkey.KeyCode = Keys.D2;
             Mappings.Add(m);
 
             m = new KeyMapping();
-            m.Generator = new Generators.GFantasyName();
+            m.Generator = new Generators.Fantasy();
             Mappings.Add(m);
 
 
@@ -40,14 +44,6 @@ namespace Client
 
         private void bsMappings_CurrentChanged(object sender, EventArgs e)
         {
-            //var m = GetCurrentMapping();
-
-            //chkAlt.Checked = m.Hotkey.Alt;
-            //chkCtrl.Checked = m.Hotkey.Control;
-            //chkShift.Checked = m.Hotkey.Shift;
-            //chkWin.Checked = m.Hotkey.Windows;
-            ///cmbKey.SelectedText = m.Hotkey.ToString();
-            
         }
 
         private KeyMapping GetCurrentMapping()
@@ -59,12 +55,14 @@ namespace Client
         {
             var m = GetCurrentMapping();
             m.UnRegister();
+            gvMappings.Refresh();
         }
 
         private void btnReg_Click(object sender, EventArgs e)
         {
             var m = GetCurrentMapping();
             m.Register(this);
+            gvMappings.Refresh();
         }
 
     }

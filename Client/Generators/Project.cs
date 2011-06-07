@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Client.Generators
 {
-    public class GProjectName : INameGenerator
+    public class Project : INameGenerator
     {
         
         public string Name

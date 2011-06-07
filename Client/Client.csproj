@@ -54,9 +54,9 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Generators\GFantasyName.cs" />
-    <Compile Include="Generators\GElfName.cs" />
-    <Compile Include="Generators\GProjectName.cs" />
+    <Compile Include="Generators\Fantasy.cs" />
+    <Compile Include="Generators\Elf.cs" />
+    <Compile Include="Generators\Project.cs" />
     <Compile Include="Generators\INameGenerator.cs" />
     <Compile Include="Hotkey.cs" />
     <Compile Include="Keyboard.cs" />
